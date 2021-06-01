@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h2A-qJ-D6E">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="UvI-Ns-Gok">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="h2A-qJ-D6E" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="f86-a2-wfS" customClass="CustomNavBar" customModule="SearchBarDropDown" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sLW-wW-aq2" kind="relationship" relationship="rootViewController" id="UuW-ck-1lW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ofd-2b-5BY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1614" y="-965"/>
+        </scene>
+        <!--Start View Controller-->
+        <scene sceneID="2L7-ej-vab">
+            <objects>
+                <viewController id="sLW-wW-aq2" customClass="StartViewController" customModule="SearchBarDropDown" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="26J-oo-CuY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c2r-KC-XaE">
+                                <rect key="frame" x="130.5" y="318.5" width="114" height="30"/>
+                                <state key="normal" title="Push to Example"/>
+                                <connections>
+                                    <segue destination="wEY-jX-xfc" kind="show" id="awO-7Y-oA5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="AMy-kM-JBs"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="c2r-KC-XaE" firstAttribute="centerY" secondItem="26J-oo-CuY" secondAttribute="centerY" id="IMK-p2-tQ4"/>
+                            <constraint firstItem="c2r-KC-XaE" firstAttribute="centerX" secondItem="26J-oo-CuY" secondAttribute="centerX" id="Jpz-E5-4kJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="y4O-uL-kKE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GlU-3k-rSB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-895" y="-964"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="kDf-Yr-UAD">
+            <objects>
+                <viewController id="wEY-jX-xfc" customClass="ViewController" customModule="SearchBarDropDown" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ILr-WE-gxC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="chv-8r-V2e"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="SOk-nf-PUL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xdE-65-yAr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="BOf-NR-fOI">
+                    <connections>
+                        <action selector="swipe:" destination="wEY-jX-xfc" id="wgZ-II-2bc"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-161" y="-965"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
